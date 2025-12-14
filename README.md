@@ -17,6 +17,13 @@ This repository contains a **website-based interactive presentation** that expla
 
 ---
 
+## Websie
+[AI Video Generation](https://arphd4.github.io/AI-2D-Generation-Idea/)
+
+Visit the **Website** given above for the documentation.
+
+---
+
 ## The Core Problem
 Current AI video generation has major limitations:
 
