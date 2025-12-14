@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Video Pipeline</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, red, blue, yellow, green);
+      background-size: 800% 800%;
+      animation: moveBG 25s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+      backdrop-filter: blur(15px) saturate(180%);
+      -webkit-backdrop-filter: blur(15px) saturate(180%);
+      background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 25px;
+      box-shadow: 0 0 50px rgba(97,218,251,0.5);
+      max-width: 1000px;
+      width: 90%;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      color: #00ffff;
+      margin-bottom: 30px;
+      text-shadow: 0 0 20px #00ffff;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 50px;
+      line-height: 1.5;
+      color: #cce7ff;
+    }
+
+    .pipeline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .block {
+      flex: 1 1 250px;
+      min-width: 220px;
+      max-width: 300px;
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(15px) saturate(180%);
+      -webkit-backdrop-filter: blur(15px) saturate(180%);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .block:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 60px rgba(97,218,251,0.8);
+    }
+
+    .creator { text-shadow: 0 0 15px red; }
+    .animator { text-shadow: 0 0 15px blue; }
+    .grader { text-shadow: 0 0 15px green; }
+    .human { text-shadow: 0 0 15px yellow; color: #000; }
+
+    .block h2 {
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+
+    .block p {
+      font-size: 1em;
+    }
+
+    button.back-btn {
+      margin: 40px 0;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #fff;
+      background: #6a11cb;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(97,218,251,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button.back-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 35px rgba(97,218,251,0.8);
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="container">
+    <h1>AI Video Generation Pipeline</h1>
+    <p>Explore how our specialized AI modules work together to create movies efficiently, consistently, and creatively.</p>
+
+    <div class="pipeline">
+      <div class="block creator" onclick="location.href='creator.html'">
+        <h2>Character & Scene Creator</h2>
+        <p>Automatically generates characters, props, and backgrounds while maintaining style consistency. Click to explore.</p>
+      </div>
+      <div class="block animator" onclick="location.href='animator.html'">
+        <h2>Animator AI</h2>
+        <p>Animates generated assets with smooth motion, expressions, and camera moves. Click to explore.</p>
+      </div>
+      <div class="block grader" onclick="location.href='grader.html'">
+        <h2>Grader / Critic AI</h2>
+        <p>Evaluates animations, ensures consistency, and provides feedback for corrections. Click to explore.</p>
+      </div>
+      <div class="block human">
+        <h2>Human Review</h2>
+        <p>Final quality check. Only approved animations proceed, ensuring professional results.</p>
+      </div>
+    </div>
+
+    <button class="back-btn" onclick="location.href='index.html'">Back to Home</button>
+
+  </div>
+</body>
+</html>
