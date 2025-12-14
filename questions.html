@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Video Generation - FAQ & Investor Guide</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ff33ff;
+  text-shadow: 0 0 25px #ff33ff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.category {
+  width: 90%;
+  max-width: 1000px;
+  margin-bottom: 40px;
+}
+
+.category h2 {
+  color: #33ffff;
+  text-shadow: 0 0 15px #33ffff;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 25px rgba(51,255,255,0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.faq-item:hover {
+  box-shadow: 0 0 45px rgba(51,255,255,0.8);
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 15px;
+  color: #ccf7ff;
+  line-height: 1.6;
+}
+
+button.back-btn {
+  margin: 50px 0;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  background: #ff33ff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,51,255,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button.back-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(255,51,255,0.8);
+}
+</style>
+</head>
+<body>
+<h1>AI Video Generation - FAQ & Investor Guide</h1>
+
+<div class="category">
+<h2>Investment & ROI Questions</h2>
+<div class="faq-item">Why is investing in AI video generation a good idea?
+  <div class="faq-answer">Because it reduces production time drastically, scales content creation, and allows creators and businesses to produce high-quality animated content faster and cheaper than traditional methods.</div>
+</div>
+<div class="faq-item">How much ROI can investors expect?</div>
+<div class="faq-answer">ROI depends on content volume and industry. With accelerated production and consistent quality, investors can see exponential returns, especially in entertainment, advertising, and e-learning sectors.</div>
+</div>
+<div class="faq-item">What are the long-term benefits?</div>
+<div class="faq-answer">Long-term benefits include a scalable pipeline, lower manpower costs, faster project turnaround, and ability to adapt to new content formats quickly.</div>
+</div>
+
+<div class="category">
+<h2>Cost & Resources</h2>
+<div class="faq-item">How much does training the AI model cost?</div>
+<div class="faq-answer">Initial training can cost several thousand dollars, depending on dataset size and hardware. Using cloud GPUs is an option to reduce upfront costs.</div>
+</div>
+<div class="faq-item">What hardware is required?</div>
+<div class="faq-answer">High-end GPUs (8–16), 200+ GB RAM, storage for datasets, and optionally a powerful CPU for orchestration. Cloud setups like AWS, GCP, or Azure can be used.</div>
+</div>
+<div class="faq-item">What software tools are needed?</div>
+<div class="faq-answer">Python, PyTorch or TensorFlow for model training, Blender or animation software for validation, Git for version control, and web frameworks for demos.</div>
+</div>
+
+<div class="category">
+<h2>Time & Patience</h2>
+<div class="faq-item">How long will it take to train?</div>
+<div class="faq-answer">Training a model fully can take days to weeks. Iterative improvements and fine-tuning are required for consistent results.</div>
+</div>
+<div class="faq-item">How much patience is required?</div>
+<div class="faq-answer">High. Continuous iteration, testing, and refinement are key. Investors and creators must understand this is a long-term strategic project.</div>
+</div>
+
+<div class="category">
+<h2>Tools & Requirements</h2>
+<div class="faq-item">Do I need 3D software?</div>
+<div class="faq-answer">Yes, for validation and integration of assets. Blender or similar software ensures AI-generated content can be animated properly.</div>
+</div>
+<div class="faq-item">Can it run on cloud?</div>
+<div class="faq-answer">Absolutely. Cloud services offer scalable GPUs and storage but dedicated hardware provides faster iteration and more control.</div>
+</div>
+
+<div class="category">
+<h2>Risks & Limitations</h2>
+<div class="faq-item">What if outputs are low-quality?</div>
+<div class="faq-answer">Grader AI and human oversight ensure feedback loops correct quality issues. Iterative improvements minimize risk.</div>
+</div>
+<div class="faq-item">Is human supervision necessary?</div>
+<div class="faq-answer">Yes. Humans verify narrative, aesthetic, and ethical aspects. AI alone cannot make all creative decisions accurately.</div>
+</div>
+<div class="category">
+<h2>Future Scope</h2>
+<div class="faq-item">Can it scale to 3D animation?</div>
+<div class="faq-answer">Yes. The pipeline is designed to support both 2D and 3D, with flexible modules for rendering and animator AI extensions.</div>
+</div>
+<div class="faq-item">Can the system be upgraded easily?</div>
+<div class="faq-answer">Absolutely. Modular architecture allows adding new AI models, styles, or animation techniques without overhauling the pipeline.</div>
+</div>
+
+<button class="back-btn" onclick="location.href='index.html'">Back to Home</button>
+
+<script>
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const answer = item.querySelector('.faq-answer');
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
+</body>
+</html>
