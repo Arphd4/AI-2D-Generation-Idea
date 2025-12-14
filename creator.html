@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator AI Module</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255,0,0,0.2), transparent 70%);
+      z-index: -1;
+      animation: moveBG 20s linear infinite;
+    }
+
+    @keyframes moveBG {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 50% 50%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+      backdrop-filter: blur(15px) saturate(180%);
+      -webkit-backdrop-filter: blur(15px) saturate(180%);
+      background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 25px;
+      box-shadow: 0 0 50px rgba(255,0,0,0.6);
+      max-width: 900px;
+      width: 90%;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #ff3333;
+      text-shadow: 0 0 20px #ff3333;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ffa0a0;
+      margin-bottom: 30px;
+    }
+
+    .slideshow-container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.3);
+      box-shadow: 0 0 30px rgba(255,0,0,0.5);
+    }
+
+    .slide {
+      display: none;
+      padding: 40px 30px;
+      color: #ffccee;
+      text-align: left;
+      font-size: 1em;
+      min-height: 250px;
+    }
+
+    .slide h2 {
+      color: #ff3333;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      text-shadow: 0 0 15px #ff3333;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 90%;
+      width: auto;
+      padding: 15px;
+      margin-top: -30px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.2em;
+      border-radius: 50%;
+      background: rgba(255,0,0,0.3);
+      user-select: none;
+      transition: 0.3s;
+    }
+
+    .prev:hover, .next:hover {
+      background: rgba(255,0,0,0.8);
+    }
+
+    .prev { left: 15px; }
+    .next { right: 15px; }
+
+    button.back-btn {
+      margin: 30px 0;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #fff;
+      background: #ff0000;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button.back-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 35px rgba(255,0,0,0.8);
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+
+  <header>
+    <h1>Creator AI</h1>
+    <p>Module 1: Automatic creation of characters, backgrounds, and props with high consistency</p>
+  </header>
+
+  <div class="slideshow-container">
+    <div class="slide">
+      <h2>Generates Characters Automatically</h2>
+      <p>The AI creates main characters, side characters, and antagonists in a consistent style across all scenes. Unlike manual design, which is labor-intensive and prone to inconsistencies, Creator AI ensures characters retain identical features, outfits, and proportions throughout the story.</p>
+    </div>
+    <div class="slide">
+      <h2>Backgrounds & Props Creation</h2>
+      <p>Automatically generates detailed environments and props. Current pipelines require multiple artists or tedious handcrafting; our AI produces forests, futuristic cities, interiors, and props in seconds, ready for animation.</p>
+    </div>
+    <div class="slide">
+      <h2>Maintains Visual Consistency</h2>
+      <p>Creator AI guarantees that all visual assets are cohesive, preserving style, scale, and color harmony across scenes. Traditional workflows often suffer style drift between scenes, especially in long projects.</p>
+    </div>
+    <div class="slide">
+      <h2>Supports Multiple Art Styles</h2>
+      <p>Whether the project requires cartoon, semi-realistic, or stylized art, Creator AI adapts to the desired aesthetic. Humans need to manually adjust styles per scene, which is time-consuming and prone to errors.</p>
+    </div>
+    <div class="slide">
+      <h2>Scene Input Driven</h2>
+      <p>Users input scene descriptions, and the AI generates characters and environments accordingly. Example: "Hero and villain in a dark alley" → AI produces a ready-to-use, layered scene. Manual creation would require hours for each asset.</p>
+    </div>
+    <div class="slide">
+      <h2>Layered Assets Ready for Animation</h2>
+      <p>Outputs are organized in layers, allowing Animator AI to directly use them without additional prep. In current methods, artists must separate layers manually, consuming hours of effort.</p>
+    </div>
+    <div class="slide">
+      <h2>Reduces Manual Workload</h2>
+      <p>By automating repetitive creation tasks, artists can focus on creative direction, storyboarding, and design choices. Compared to the traditional labor-intensive approach, this improves both speed and quality.</p>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <button class="back-btn" onclick="location.href='pipeline.html'">Back to Pipeline</button>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlides(n) {
+      if (n >= slides.length) { slideIndex = 0; }
+      if (n < 0) { slideIndex = slides.length - 1; }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex].style.display = "block";
+    }
+
+    function plusSlides(n) {
+      slideIndex += n;
+      showSlides(slideIndex);
+    }
+
+    function autoSlides() {
+      slideIndex++;
+      showSlides(slideIndex);
+      setTimeout(autoSlides, 5000);
+    }
+
+    showSlides(slideIndex);
+    setTimeout(autoSlides, 5000);
+  </script>
+</body>
+</html>
