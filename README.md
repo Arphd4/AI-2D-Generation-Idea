@@ -1,7 +1,5 @@
 # AI Video Generation
 
-## A New Idea for Fast, Consistent, and Affordable AI-Made Movies
-
 ---
 
 ## Overview
@@ -12,8 +10,6 @@ The goal:
 - Strong visual consistency
 - Easy corrections and iteration
 - Affordable tools for small creators
-
-This repository contains a **website-based interactive presentation** that explains the idea visually.
 
 ---
 
@@ -72,30 +68,9 @@ Creator → Animator → Grader → (Fix or Approve) → Human
 
 ---
 
-## Tech Stack
-- HTML, CSS, JavaScript
-- Designed for static hosting
-- Works on GitHub Pages / Netlify
-
----
-
-## Target Audience
-- Students
-- Indie creators
-- AI researchers
-- Small studios
-
----
-
 ## License
 This project is licensed under the **MIT License**.
 You are free to use, modify, and share this project with attribution.
-
----
-
-## Status
-This project is currently a **concept + prototype presentation**.
-Future work may include real AI model integration.
 
 ---
 
