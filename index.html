@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Video Generation</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+      backdrop-filter: blur(15px) saturate(180%);
+      -webkit-backdrop-filter: blur(15px) saturate(180%);
+      background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 25px;
+      box-shadow: 0 0 50px rgba(97,218,251,0.5);
+      max-width: 900px;
+      width: 90%;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #00ffff;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      text-shadow: 0 0 20px #00ffff;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      line-height: 1.5;
+      color: #cce7ff;
+    }
+
+    button {
+      padding: 20px 50px;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(97,218,251,0.3);
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(97,218,251,0.5);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+
+    button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 50px rgba(97,218,251,0.8);
+      background: rgba(97,218,251,0.5);
+    }
+
+    /* Background animation */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 30%, #00ffff55, transparent 40%),
+                  radial-gradient(circle at 70% 70%, #ff00ff55, transparent 40%);
+      background-size: 400% 400%;
+      animation: moveBG 20s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveBG {
+      0% { background-position: 0% 0%, 100% 100%; }
+      50% { background-position: 50% 50%, 50% 50%; }
+      100% { background-position: 0% 0%, 100% 100%; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="container">
+    <h1>AI Video Generation</h1>
+    <p>Experience the future of content creation with our specialized AI pipeline. Fast, consistent, and creative, this platform allows even small creators to make movies without the cost of large studios. </p>
+    <button onclick="location.href='pipeline.html'">Get Started</button>
+  </div>
+
+</body>
+</html>
