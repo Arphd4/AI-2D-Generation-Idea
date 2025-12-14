@@ -65,20 +65,6 @@ Creator → Animator → Grader → (Fix or Approve) → Human
 
 ---
 
-## Website Structure
-
-This repository includes a multi-page website:
-
-- `index.html` – Introduction & vision
-- `pipeline.html` – Explains the full AI workflow
-- `creator.html` – Character & Scene Creator module
-- `animator.html` – Animator AI module
-- `grader.html` – Grader / Critic AI module
-
-Each page uses a futuristic UI with slideshow-style explanations.
-
----
-
 ## Tech Stack
 - HTML, CSS, JavaScript
 - Designed for static hosting
